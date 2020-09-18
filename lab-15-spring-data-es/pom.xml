@@ -12,7 +12,7 @@
     <artifactId>lab-15-spring-data-es</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>lab-15-spring-data-jest</module>
+        <!--<module>lab-15-spring-data-jest</module>-->
         <module>lab-15-spring-data-elasticsearch</module>
     </modules>
 

@@ -2,5 +2,11 @@ spring:
   data:
     # Elasticsearch 配置项
     elasticsearch:
-      cluster-name: elasticsearch # 集群名
-      cluster-nodes: 127.0.0.1:9300 # 集群节点
+      cluster-name: escluster # 集群名
+      cluster-nodes: 172.31.1.159:9300,172.31.1.153:9300 # 集群节点
+      keystore-path: D:/opt/apps/Applications/icp_es/WEB-INF/classes/elastic-certificates.p12
+      user: elastic
+      password: inspur
+server:
+  port: 9819
+
