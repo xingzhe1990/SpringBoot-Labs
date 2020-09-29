@@ -8,6 +8,11 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <properties>
+        <esVersion>6.5.2</esVersion>
+    </properties>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>lab-15-spring-data-elasticsearch</artifactId>
@@ -50,13 +55,13 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>x-pack-transport</artifactId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>transport</artifactId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>elasticsearch</artifactId>
@@ -65,20 +70,14 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <artifactId>elasticsearch</artifactId>
             <groupId>org.elasticsearch</groupId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch.plugin</groupId>
             <artifactId>transport-netty4-client</artifactId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>elasticsearch</artifactId>
@@ -89,7 +88,7 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>elasticsearch</artifactId>
@@ -100,13 +99,20 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>x-pack-core</artifactId>
-            <version>6.5.2</version>
+            <version>${esVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>com.unboundid</groupId>
             <artifactId>unboundid-ldapsdk</artifactId>
             <version>4.0.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
